@@ -1,4 +1,61 @@
 *{
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
+	font: 'Poppins',sans-serif;
+	list-style: none;
+}
+
+
+body{
+	background: #f1f0f6;
+}
+.container{
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	justify-content: space-between;
+}
+.bio-container{
+	height: 100%;
+	width: 20%;
+	border: 1px solid gray;
+}
+.center-container{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 70%;
+}
+.nav-container{
+	width: 5%;
+	border: 1px solid black;
+}
+
+.summary-card{
+	display: flex;
+	position: relative;
+	background: white;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	border-radius: 10px;
+	border-bottom: 1px solid black;
+}
+
+.services-offered{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 20px;
+	align-content: center;
+}
+.service{
+	background: white;
+	width: 100%;
+	height: 200px;
+
+	border-radius: 10px;
+}
+
+.item-card{
+	background: white;
 }
