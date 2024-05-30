@@ -73,3 +73,11 @@ body{
 	font-size: 40px;
 	font-weight: 700;
 }
+.btn{
+	background: #F99417;
+  width: 9rem;
+  height: 3rem;
+  border-color: #b931fc;
+  font-weight: 700;
+  border-radius: 5px;
+}
