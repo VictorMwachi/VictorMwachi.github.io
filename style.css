@@ -33,12 +33,20 @@ body{
 }
 
 .summary-card{
+	box-sizing: content-box;
 	display: flex;
 	position: relative;
 	background: white;
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 	border-radius: 10px;
-	border-bottom: 1px solid black;
+
+}
+.summary{
+	padding: 50px;
+}
+.display-picture{
+	
+
 }
 
 .services-offered{
@@ -60,4 +68,8 @@ body{
 	display: grid;
 	grid-template-columns:  4fr 6fr;
 	background: white;
+}
+.title{
+	font-size: 40px;
+	font-weight: 700;
 }
