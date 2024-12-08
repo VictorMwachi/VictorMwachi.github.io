@@ -13,18 +13,13 @@ body{
 .container{
 	display: flex;
 	width: 100vw;
-	justify-content: center;
+	/**justify-content: center;**/
 }
-.bio-container{
-	height: 100%;
-	width: 10%;
-	border: 1px solid gray;
-}
+
 .center-container{
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	width: 70%;
 }
 
 
@@ -40,33 +35,12 @@ body{
 .summary{
 	padding: 50px;
 }
-.display-picture{
-	
 
-}
-
-.services-offered{
-
-}
 .card{
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.service{
-	background: white;
-	width: 100%;
-	height: 200px;
-	border-radius: 10px;
 }
 
 .title{
 	font-size: 40px;
 	font-weight: 700;
-}
-.btn{
-	background: #F99417;
-  width: 9rem;
-  height: 3rem;
-  border-color: #b931fc;
-  font-weight: 700;
-  border-radius: 5px;
 }
