@@ -10,30 +10,13 @@
 body{
 	background: #f1f0f6;
 }
-.container{
-	display: flex;
-	/**justify-content: center;**/
-}
-
-.center-container{
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
 
 
-.summary-card{
-	box-sizing: content-box;
-	display: flex;
-	position: relative;
-	background: white;
-	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-	border-radius: 10px;
 
-}
-.summary{
-	padding: 50px;
-}
+
+
+
+
 
 .card{
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
