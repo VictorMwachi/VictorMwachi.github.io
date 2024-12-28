@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      /* Main timeline container */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  margin-left: 30px; /* Space for the vertical line */
+}
+
+/* Vertical connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 25px; /* Centered with the circles */
+  top: 0;
+  width: 2px; /* Thickness of the line */
+  height: 100%;
+  background-color: #d3d3d3; /* Light grey for the line */
+  z-index: 0;
+}
+
+/* Timeline items */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  background-color: #eaf4f4;
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Above the line */
+  width: fit-content; /* Size based on content */
+  max-width: 80%; /* Limit width */
+}
+
+/* Chat bubble triangle */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 15px; /* Align with the middle */
+  left: -10px; /* Triangle position */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0; /* Adjust triangle size */
+  border-color: transparent #eaf4f4 transparent transparent; /* Match item background */
+}
+
+/* Timeline circle markers */
+.timeline-item .circle {
+  width: 20px;
+  height: 20px;
+  background-color: #6a1b9a; /* Purple for the circles */
+  border-radius: 50%;
+  z-index: 1;
+  border: 2px solid white; /* Creates a border effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+    </style>
+</head>
+<title></title>
+<body>
+
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="circle"></div>
+    <div class="content">This is the first timeline item.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="circle"></div>
+    <div class="content">This is the second timeline item.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="circle"></div>
+    <div class="content">This is the third timeline item.</div>
+  </div>
+</div>
+</body>
+</html>

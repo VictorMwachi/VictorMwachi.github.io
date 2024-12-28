@@ -1,99 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Decorative Card</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-        margin: 0;
-    }
-    .card {
-        position: relative;
-        width: 300px;
-        padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    .card::before,
-    .card::after {
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        background-color: #ff6347;
-        opacity: 0.2;
-        z-index: -1;
-    }
-    .card::before {
-        width: 200px;
-        height: 200px;
-        top: -50px;
-        right: -50px;
-    }
-    .card::after {
-        width: 150px;
-        height: 150px;
-        bottom: -30px;
-        left: -30px;
-    }
-    .shape-1, .shape-2, .shape-3 {
-        content: '';
-        position: absolute;
-        background-color: #4682b4;
-        opacity: 0.15;
-        z-index: -1;
-    }
-    .shape-1 {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        top: -20px;
-        left: -20px;
-    }
-    .shape-2 {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        bottom: 50px;
-        right: 50px;
-        background-color: #32cd32;
-    }
-    .shape-3 {
-        width: 120px;
-        height: 40px;
-        border-radius: 20px;
-        top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #ffa500;
-    }
-    .card h1 {
-        margin: 0 0 10px;
-        font-size: 24px;
-        color: #333;
-    }
-    .card p {
-        margin: 0;
-        font-size: 16px;
-        color: #666;
-    }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline</title>
+  <style>
+    .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  margin-left: 30px; /* Adds space for the line */
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px; /* Position of the line */
+  top: 0;
+  width: 4px; /* Thickness of the line */
+  height: 100%;
+  background-color: #d3d3d3; /* Light gray shade for the connector */
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  background-color: #eaf4f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Keeps items above the line */
+}
+
+.timeline-item::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #6a1b9a; /* Purple dot color */
+  border-radius: 50%;
+  position: absolute;
+  left: -25px;
+  top: 20px; /* Align with the text */
+}
+
+  </style>
 </head>
 <body>
-<div class="card">
-    <h1>Card Title</h1>
-    <p>This is some description text inside the card. It provides more details about the content of the card.</p>
-    <div class="shape-1">+</div>
-    <div class="shape-2">*</div>
-    <div class="shape-3">-</div>
-</div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Creative Designer</h3>
+      <span>2017-2018</span>
+      <p>
+        Even the all-powerful Pointing has no control about the blind texts. It is an almost unorthographic life.
+      </p>
+    </div>
+    <div class="timeline-item">
+      <h3>UI/UX Designer at Envato</h3>
+      <span>2017-2018</span>
+      <p>
+        Even the all-powerful Pointing has no control about the blind texts. It is an almost unorthographic life.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
