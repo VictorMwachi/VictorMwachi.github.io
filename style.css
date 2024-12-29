@@ -8,10 +8,11 @@
 
 
 body{
-	background: #f1f0f6;
+	/*background: #f1f0f6;*/
+	background: lightblue;
 }
 
-.card{
+.card {
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -27,4 +28,36 @@ body{
 }
 .progress-bar{
 	border-radius: inherit;
+}
+.timeline-entry-inner{
+	margin-left: 30px;
+}
+.timeline-label{
+	position: relative;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.timeline-label h2{
+	padding: 20px;
+}
+.timeline-label p{
+	padding: 0px 20px 20px;
+}
+.timeline-label::after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	height: 0;
+	width: 0;
+	border-style: solid;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+
+}
+.timeline-icon{
+	display: block;
+	width: 40px;
+	height: 40px;
 }
