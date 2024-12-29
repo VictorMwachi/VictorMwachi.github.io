@@ -30,6 +30,8 @@ body{
 	border-radius: inherit;
 }
 .timeline-entry-inner{
+	display: flex;
+	gap: 10px;
 	margin-left: 30px;
 }
 .timeline-label{
@@ -60,4 +62,18 @@ body{
 	display: block;
 	width: 40px;
 	height: 40px;
+}
+.timeline{
+	position: relative;
+}
+.timeline::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 2px;
+	height: 100%;
+	background-color: #d3d3d3; /* Grey color for the line */
+    z-index: 0; /* Place it behind the icons */
+
 }
