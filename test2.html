@@ -2,84 +2,87 @@
 <html lang="en">
 <head>
     <style>
-      /* Main timeline container */
+     body {
+	background: lightblue;
+	font-family: 'Poppins', sans-serif;
+}
+
 .timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-  margin-left: 30px; /* Space for the vertical line */
+	position: relative;
+	padding: 20px;
 }
 
-/* Vertical connecting line */
 .timeline::before {
-  content: '';
-  position: absolute;
-  left: 25px; /* Centered with the circles */
-  top: 0;
-  width: 2px; /* Thickness of the line */
-  height: 100%;
-  background-color: #d3d3d3; /* Light grey for the line */
-  z-index: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 30px;
+	width: 2px;
+	height: 100%;
+	background-color: #d3d3d3;
+	z-index: 0;
 }
 
-/* Timeline items */
-.timeline-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  position: relative;
-  background-color: #eaf4f4;
-  border-radius: 15px;
-  padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1; /* Above the line */
-  width: fit-content; /* Size based on content */
-  max-width: 80%; /* Limit width */
+.timeline-entry {
+	position: relative;
+	margin-bottom: 20px;
 }
 
-/* Chat bubble triangle */
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  top: 15px; /* Align with the middle */
-  left: -10px; /* Triangle position */
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 10px 10px 0; /* Adjust triangle size */
-  border-color: transparent #eaf4f4 transparent transparent; /* Match item background */
+.timeline-entry-inner {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin-left: 50px;
 }
 
-/* Timeline circle markers */
-.timeline-item .circle {
-  width: 20px;
-  height: 20px;
-  background-color: #6a1b9a; /* Purple for the circles */
-  border-radius: 50%;
-  z-index: 1;
-  border: 2px solid white; /* Creates a border effect */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.timeline-icon {
+	width: 20px;
+	height: 20px;
+	background-color: beige;
+	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.timeline-label {
+	position: relative;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+}
+
+.timeline-label::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+}
+
   
     </style>
 </head>
 <title></title>
 <body>
 
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="circle"></div>
-    <div class="content">This is the first timeline item.</div>
+  <div class="timeline">
+    <article class="timeline-entry">
+      <div class="timeline-entry-inner">
+        <div class="timeline-icon">
+          <i class="fas fa-pen"></i>
+        </div>
+        <div class="timeline-label">
+          <h2><a href="#">Front End Developer at Google</a> <span>2017-2018</span></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestiae dignissimos repudiandae eum magni placeat!</p>
+        </div>
+      </div>
+    </article>
   </div>
-  <div class="timeline-item">
-    <div class="circle"></div>
-    <div class="content">This is the second timeline item.</div>
-  </div>
-  <div class="timeline-item">
-    <div class="circle"></div>
-    <div class="content">This is the third timeline item.</div>
-  </div>
-</div>
-</body>
+  </body>
 </html>

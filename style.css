@@ -29,10 +29,13 @@ body{
 .progress-bar{
 	border-radius: inherit;
 }
+
 .timeline-entry-inner{
 	display: flex;
+	align-items: flex-start;
 	gap: 10px;
 	margin-left: 30px;
+	margin-bottom: 20px;
 }
 .timeline-label{
 	position: relative;
@@ -59,14 +62,18 @@ body{
 
 }
 .timeline-icon{
-	display: block;
-	width: 40px;
-	height: 40px;
+	width: 20px;
+	height: 20px;
+	left: -50px;
+	background-color: beige;
+	border-radius: 50%;
+	z-index: 1;
+	top: 20;
 }
 .timeline{
 	position: relative;
 }
-.timeline::after{
+.timeline::before{
 	content: '';
 	position: absolute;
 	top: 0;
